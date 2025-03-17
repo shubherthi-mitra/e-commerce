@@ -22,8 +22,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://e-commerce-frontend-virid-theta.vercel.app", // User frontend
-      "https://e-commerce-admin-six-bice.vercel.app", // Admin frontend
+      process.env.FRONTEND_URL, // User frontend
+      process.env.ADMIN_URL, // Admin frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
