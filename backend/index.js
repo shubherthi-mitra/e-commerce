@@ -21,17 +21,17 @@ connectCloudinary();
 
 //Middlewares
 app.use(express.json());
-app.use(
-  cors({
-    origin: [
-      process.env.FRONTEND_URL, // User frontend
-      process.env.ADMIN_URL, // Admin frontend
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, // Allow cookies & auth headers
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       process.env.FRONTEND_URL, // User frontend
+//       process.env.ADMIN_URL, // Admin frontend
+//     ],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true, // Allow cookies & auth headers
+//   })
+// );
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", req.headers.origin);
