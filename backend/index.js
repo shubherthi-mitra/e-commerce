@@ -21,6 +21,7 @@ connectCloudinary();
 
 //Middlewares
 app.use(express.json());
+app.use(cors()); // Enable CORS for all origins
 // app.use(
 //   cors({
 //     origin: [
