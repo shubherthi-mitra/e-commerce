@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { config } from "dotenv";
 import Home from "./pages/Home";
 import Collection from "./pages/Collection";
 import About from "./pages/About";
@@ -15,9 +14,6 @@ import SearchBar from "./components/SearchBar";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
-config({
-  path: ".//.env",
-});
 const App = () => {
   return (
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
