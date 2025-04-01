@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { config } from "dotenv";
 import Navbar from "./components/Navbar";
 import SideBar from "./components/Sidebar";
 import Add from "./pages/Add";
@@ -9,7 +10,11 @@ import Login from "./components/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const backendUrl = import.meta.env.VITE_BACKEND_URL;
+config({
+  path: "./config/.env",
+});
+
+export const backendUrl = process.env.VITE_BACKEND_URL;
 export const currency = "$";
 
 const App = () => {
